@@ -7,12 +7,27 @@ namespace MVCSession1.Controllers
         ////public ActionResult Index()
         ////{
         ////    return Redirect("/Home/AboutUs");
-              
+
         ////}
 
-        public string AboutUs()
+        public IActionResult Index()
         {
-            return "This is About Us Action ";
+            return View();
+        }
+
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
         }
     }
 }
