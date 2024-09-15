@@ -4,28 +4,20 @@
 @{
 }
 <html>
-<head>
-    <title>Index</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
-</head>
 <body>
-
-    <header>
+    @* <header>
         <center>
-            <a href="/Home/Index" class="btn btn-primary">Home</a>
-            <a href="/Home/AboutUs" class="btn btn-dark">AboutUs</a>
-            <a href="/Home/ContactUs" class="btn btn-danger">ContactUs</a>
-            <a href="/Home/Privacy" class="btn btn-secondary">Privacy</a>
+            <a href="Home/Index" class="btn btn-primary">Home</a>
+            <a href="Home/AboutUs" class="btn btn-primary">AboutUs</a>
+            <a href="Home/ContactUs" class="btn btn-primary">ContactUs</a>
+            <a href="Home/Privacy" class="btn btn-primary">Privacy</a>
         </center>
-    </header>
-    <div>
-        <h1>Home page</h1>
-    </div>
+    </header> *@
 
-    <footer>
-        <center>
-            CopyRights Route academy @DateTime.Now.Year
-        </center>
-    </footer>
+    @{
+        Layout = "_Layout";
+    }
+    <h1>Home page</h1>
+
 </body>
 </html>

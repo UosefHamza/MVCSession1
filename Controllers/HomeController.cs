@@ -15,7 +15,7 @@ namespace MVCSession1.Controllers
             return View();
         }
 
-        public IActionResult AboutUs()
+        public IActionResult AbouUs()
         {
             return View();
         }

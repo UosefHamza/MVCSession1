@@ -48,9 +48,9 @@ namespace MVCSession1
             #endregion
 
             app.MapControllerRoute(
-                name:"default",
-                pattern:"/{Controller = Home}/{Action = Index}",
-                defaults : new { Controller = "Home" , Action = "Index" }
+                name: "default",
+                pattern: "/{Controller=Home}/{Action=Privacy}",
+                defaults: new { Controller = "Home", Action = "Privacy" }
                 );
 
             //app.MapControllerRoute(
