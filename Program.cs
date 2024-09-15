@@ -8,11 +8,13 @@ namespace MVCSession1
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 
             app.UseRouting();
+
+            app.UseStaticFiles();
             #region my
             //app.UseEndpoints(endpoints =>
             //{
@@ -46,16 +48,16 @@ namespace MVCSession1
             #endregion
 
             app.MapControllerRoute(
-                name:"default",
-                pattern:"/{Controller = Home}/{Action = Index}",
-                defaults : new { Controller = "Home" , Action = "Index" }
+                name: "default",
+                pattern: "/{Controller=Home}/{Action=Privacy}",
+                defaults: new { Controller = "Home", Action = "Privacy" }
                 );
 
-            app.MapControllerRoute(
-               name: "default",
-               pattern: "/{Controller = Home}/{Action = AboutUs}",
-               defaults: new { Controller = "Home", Action = "AboutUs" }
-               );
+            //app.MapControllerRoute(
+            //   name: "default",
+            //   pattern: "/{Controller = Home}/{Action = AboutUs}",
+            //   defaults: new { Controller = "Home", Action = "AboutUs" }
+            //   );
 
             //app.Run(async(HttpContext) => { await HttpContext.Response.WriteAsync("Your Requested Page Not Found"); } );
 
